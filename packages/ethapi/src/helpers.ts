@@ -8,7 +8,7 @@ import { EthApi } from "./ethapi";
 
 const debug = Debug("civil:ethapi:helpers");
 
-const DEFAULT_HTTP_NODE = "http://localhost:8545";
+export const DEFAULT_HTTP_NODE = "http://localhost:8545";
 
 export function detectProvider(): Web3.Provider {
   let provider: Web3.Provider;
