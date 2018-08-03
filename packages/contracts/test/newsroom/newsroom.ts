@@ -118,7 +118,9 @@ contract("Newsroom", (accounts: string[]) => {
       it("verifies that the signature was not used in other content", async () => {
         await newsroom.publishContent(SOME_URI, SOME_HASH, author, SIGNATURE, { from: editor });
 
-        await expect(newsroom.publishContent(SOME_URI, SOME_HASH, author, SIGNATURE, { from: editor })).to.eventually.be.rejectedWith(REVERTED);
+        await expect(
+          newsroom.publishContent(SOME_URI, SOME_HASH, author, SIGNATURE, { from: editor }),
+        ).to.eventually.be.rejectedWith(REVERTED);
       });
 
       // Implementation edge case
@@ -127,7 +129,9 @@ contract("Newsroom", (accounts: string[]) => {
 
         await newsroom.signRevision(0, 0, author, SIGNATURE, { from: defaultAccount });
 
-        await expect(newsroom.publishContent(SOME_URI, SOME_HASH, author, SIGNATURE, { from: editor })).to.eventually.be.rejectedWith(REVERTED);
+        await expect(
+          newsroom.publishContent(SOME_URI, SOME_HASH, author, SIGNATURE, { from: editor }),
+        ).to.eventually.be.rejectedWith(REVERTED);
       });
     });
   });
@@ -302,7 +306,9 @@ contract("Newsroom", (accounts: string[]) => {
 
         await newsroom.publishContent(SECOND_URI, SECOND_HASH, author, SECOND_SIGNATURE);
 
-        await expect(newsroom.updateRevision(contentId, SECOND_URI, SECOND_HASH, SECOND_SIGNATURE)).to.eventually.be.rejectedWith(REVERTED);
+        await expect(
+          newsroom.updateRevision(contentId, SECOND_URI, SECOND_HASH, SECOND_SIGNATURE),
+        ).to.eventually.be.rejectedWith(REVERTED);
       });
 
       it("requires signature from the same author", async () => {
@@ -507,9 +513,13 @@ contract("Newsroom", (accounts: string[]) => {
     it("requires the owner to sign charter", async () => {
       expect(await newsroom.revisionCount(0)).to.be.bignumber.equal(1);
 
-      await expect(newsroom.signRevision(0, 0, author, SIGNATURE, { from: editor })).to.eventually.be.rejectedWith(REVERTED);
+      await expect(newsroom.signRevision(0, 0, author, SIGNATURE, { from: editor })).to.eventually.be.rejectedWith(
+        REVERTED,
+      );
 
-      await expect(newsroom.signRevision(0, 0, author, SIGNATURE, { from: defaultAccount })).to.eventually.be.fulfilled();
+      await expect(
+        newsroom.signRevision(0, 0, author, SIGNATURE, { from: defaultAccount }),
+      ).to.eventually.be.fulfilled();
     });
 
     describe("with no publishing author", () => {
