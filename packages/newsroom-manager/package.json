@@ -11,12 +11,14 @@
     "build": "tsc",
     "lint": "tslint --project ./",
     "clean": "rimraf build/",
-    "prepublish": "run-s build",
-    "test": "echo \"add tests please\""
+    "prepublish": "npm run snyk-protect; run-s build",
+    "test": "echo \"add tests please\"",
+    "snyk-protect": "snyk protect"
   },
   "dependencies": {
     "@joincivil/components": "^1.2.1",
-    "@joincivil/core": "^4.2.1"
+    "@joincivil/core": "^4.2.1",
+    "snyk": "^1.192.0"
   },
   "devDependencies": {
     "immutable": "^3.8.2",
@@ -32,5 +34,6 @@
   "peerDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
-  }
+  },
+  "snyk": true
 }
