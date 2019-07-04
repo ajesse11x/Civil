@@ -26,10 +26,11 @@
     "build": "tsc",
     "lint": "tslint --exclude \"**/storyFixtures/**\" --project ./",
     "clean": "rimraf build/",
-    "prepublish": "run-s build",
+    "prepublish": "npm run snyk-protect; run-s build",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "storybook:build": "build-storybook -c .storybook -o out",
-    "test": "NODE_ENV=test jest"
+    "test": "NODE_ENV=test jest",
+    "snyk-protect": "snyk protect"
   },
   "devDependencies": {
     "@storybook/addon-storyshots": "^3.3.14",
@@ -78,6 +79,8 @@
     "react-router-dom": "^4.2.2",
     "react-rte": "^0.16.1",
     "rxjs": "^5.5.6",
-    "styled-components": "^3.2.3"
-  }
+    "styled-components": "^3.2.3",
+    "snyk": "^1.192.0"
+  },
+  "snyk": true
 }
