@@ -1,0 +1,56 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-450202:
+    - '@joincivil/components > @joincivil/core > ipfs-http-client > ipld-dag-pb > async > lodash':
+        patched: '2019-07-04T21:44:58.610Z'
+    - '@joincivil/components > lodash':
+        patched: '2019-07-04T21:44:58.610Z'
+    - '@joincivil/core > ipfs-http-client > lodash':
+        patched: '2019-07-04T21:44:58.610Z'
+    - '@joincivil/components > @joincivil/core > ipfs-http-client > lodash':
+        patched: '2019-07-04T21:44:58.610Z'
+    - '@joincivil/core > ipfs-http-client > async > lodash':
+        patched: '2019-07-04T21:44:58.610Z'
+    - '@joincivil/components > @joincivil/core > @joincivil/ethapi > lodash':
+        patched: '2019-07-04T21:44:58.610Z'
+    - '@joincivil/core > ipfs-http-client > libp2p-crypto > async > lodash':
+        patched: '2019-07-04T21:44:58.610Z'
+    - '@joincivil/core > ipfs-http-client > ipld-dag-pb > async > lodash':
+        patched: '2019-07-04T21:44:58.610Z'
+    - '@joincivil/components > @joincivil/core > ipfs-http-client > async > lodash':
+        patched: '2019-07-04T21:44:58.610Z'
+    - '@joincivil/core > ipfs-http-client > peer-id > async > lodash':
+        patched: '2019-07-04T21:44:58.610Z'
+    - '@joincivil/components > @joincivil/core > ipfs-http-client > peer-id > async > lodash':
+        patched: '2019-07-04T21:44:58.610Z'
+    - '@joincivil/core > ipfs-http-client > libp2p-crypto > libp2p-crypto-secp256k1 > async > lodash':
+        patched: '2019-07-04T21:44:58.610Z'
+    - '@joincivil/components > @joincivil/ethapi > lodash':
+        patched: '2019-07-04T21:44:58.610Z'
+    - '@joincivil/core > ipfs-http-client > peer-info > peer-id > async > lodash':
+        patched: '2019-07-04T21:44:58.610Z'
+    - '@joincivil/components > @joincivil/core > ipfs-http-client > libp2p-crypto > async > lodash':
+        patched: '2019-07-04T21:44:58.610Z'
+    - '@joincivil/core > ipfs-http-client > peer-id > libp2p-crypto > async > lodash':
+        patched: '2019-07-04T21:44:58.610Z'
+    - '@joincivil/components > @joincivil/core > ipfs-http-client > peer-id > libp2p-crypto > async > lodash':
+        patched: '2019-07-04T21:44:58.610Z'
+    - '@joincivil/components > @joincivil/core > ipfs-http-client > peer-info > peer-id > async > lodash':
+        patched: '2019-07-04T21:44:58.610Z'
+    - '@joincivil/core > ipfs-http-client > peer-info > peer-id > libp2p-crypto > async > lodash':
+        patched: '2019-07-04T21:44:58.610Z'
+    - '@joincivil/components > @joincivil/core > ipfs-http-client > libp2p-crypto > libp2p-crypto-secp256k1 > async > lodash':
+        patched: '2019-07-04T21:44:58.610Z'
+    - '@joincivil/core > ipfs-http-client > peer-id > libp2p-crypto > libp2p-crypto-secp256k1 > async > lodash':
+        patched: '2019-07-04T21:44:58.610Z'
+    - '@joincivil/core > ipfs-http-client > peer-info > peer-id > libp2p-crypto > libp2p-crypto-secp256k1 > async > lodash':
+        patched: '2019-07-04T21:44:58.610Z'
+    - '@joincivil/components > @joincivil/core > ipfs-http-client > peer-info > peer-id > libp2p-crypto > async > lodash':
+        patched: '2019-07-04T21:44:58.610Z'
+    - '@joincivil/components > @joincivil/core > ipfs-http-client > peer-id > libp2p-crypto > libp2p-crypto-secp256k1 > async > lodash':
+        patched: '2019-07-04T21:44:58.610Z'
+    - '@joincivil/components > @joincivil/core > ipfs-http-client > peer-info > peer-id > libp2p-crypto > libp2p-crypto-secp256k1 > async > lodash':
+        patched: '2019-07-04T21:44:58.610Z'
