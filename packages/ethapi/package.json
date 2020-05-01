@@ -8,7 +8,9 @@
     "build": "tsc",
     "build:watch": "tsc -w",
     "lint": "tslint --project ./",
-    "clean": "rimraf build/"
+    "clean": "rimraf build/",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "The Civil Media Company",
   "license": "Apache-2.0",
@@ -29,6 +31,8 @@
     "ethereumjs-util": "^5.2.0",
     "lodash": "^4.17.10",
     "rxjs": "^5.5.6",
-    "web3": "^0.20.3"
-  }
+    "web3": "^0.20.3",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
