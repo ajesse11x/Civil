@@ -15,8 +15,8 @@
     "test": "echo \"add tests please\""
   },
   "dependencies": {
-    "@joincivil/components": "^1.2.1",
-    "@joincivil/core": "^4.2.1"
+    "@joincivil/components": "^2.1.0",
+    "@joincivil/core": "^5.0.1"
   },
   "devDependencies": {
     "immutable": "^3.8.2",
